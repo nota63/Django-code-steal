@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>source code</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="welcome-text">Hey! Lets Do Some Illegal</h1>
+    </div>
+    <strong>Enter The Url Below</strong>
+    <section id="1">
+        <div class="2">
+            <form method="post">
+                {% csrf_token %}
+                <label>enter url</label>
+                <input type="text" name="url1" class="url-class"/>
+
+                <button type="submit" class="button-class">Get</button>
+
+                <label>source_code</label>
+                <input type="text" value="{{html}}" class="output-class"/>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
